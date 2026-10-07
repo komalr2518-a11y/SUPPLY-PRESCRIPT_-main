@@ -1,0 +1,6 @@
+{
+  "name": "Autonomous Control Tower",
+  "description": "Mission-critical supply chain orchestration, high-stakes inventory mitigation, and closed-loop algorithmic decision intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
