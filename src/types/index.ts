@@ -74,6 +74,18 @@ export interface DisruptionItem {
   updatedAt: string;
 }
 
+export interface AuditTrailInfo {
+  auditHash: string;
+  triggerCondition: string;
+  policyRuleApplied: string;
+  erpReference: string;
+  tmsSignature: string;
+  customsBondId?: string;
+  authorizedActor: string;
+  rationaleNotes: string[];
+  complianceStandard: string;
+}
+
 export interface ExecutionRecord {
   id: string;
   disruptionId: string;
@@ -88,6 +100,7 @@ export interface ExecutionRecord {
   executionMode: 'autonomous' | 'operator_authorized';
   status: 'completed' | 'in_transit' | 'evaluating';
   feedbackScore: number; // 0 - 100
+  auditTrail?: AuditTrailInfo;
 }
 
 export interface SimulationParams {

@@ -102,6 +102,21 @@ export default function App() {
         executionMode: autoPilotEnabled ? 'autonomous' : 'operator_authorized',
         status: 'completed',
         feedbackScore: 98,
+        auditTrail: {
+          auditHash: `sha256:${Math.random().toString(16).substring(2, 10)}${Math.random().toString(16).substring(2, 10)}7f4c9a81e309bb2a41d5018cb1749830`,
+          triggerCondition: `Buffer depletion drift +${disruption.leadTimeDriftDays}d on corridor ${disruption.lane.originCode} → ${disruption.lane.destCode}`,
+          policyRuleApplied: autoPilotEnabled
+            ? 'AUTONOMOUS_INTERVENTION_CRITICAL_HIGH_CONFIDENCE_V4'
+            : 'OPERATOR_DISPATCH_MANUAL_AUTHORIZED_RULE_1',
+          erpReference: `SAP-S4HANA-PO-${Math.floor(882000 + Math.random() * 999)}`,
+          tmsSignature: `EDI-204-DISPATCH-${disruption.lane.destCode}-${Math.floor(1000 + Math.random() * 9000)}`,
+          customsBondId: `CBP-ENTRY-${Math.floor(300 + Math.random() * 50)}-${Math.floor(100000 + Math.random() * 899999)}`,
+          authorizedActor: autoPilotEnabled
+            ? 'Autonomous Engine (Agent: DISPATCH_POLICY_CORE_01)'
+            : 'S. Sterling (Global Tower Dispatch Director)',
+          complianceStandard: 'ISO 28000:2022 / 21 CFR Part 11 / SOC 2 Type II',
+          rationaleNotes: prescription.algorithmicRationale,
+        },
       };
 
       setLedger((prev) => [newLedgerItem, ...prev]);

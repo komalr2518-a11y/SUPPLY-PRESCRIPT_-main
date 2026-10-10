@@ -462,6 +462,21 @@ export const INITIAL_EXECUTION_LEDGER: ExecutionRecord[] = [
     executionMode: 'autonomous',
     status: 'completed',
     feedbackScore: 98,
+    auditTrail: {
+      auditHash: 'sha256:7f4c9a81e309bb2a41d5018cb1749830da42b9195d2c67341852f84501a3de92',
+      triggerCondition: 'Stockout horizon reached 2.4 days with line-down threat at Server Assembly Line 2',
+      policyRuleApplied: 'AUTONOMOUS_INTERVENTION_CRITICAL_HIGH_CONFIDENCE_V4',
+      erpReference: 'SAP-S4HANA-PO-881920',
+      tmsSignature: 'EDI-204-AIR-ATLAS-CHARTER-TPE-SJC-9921',
+      customsBondId: 'CBP-ACE-ENTRY-315-992018',
+      authorizedActor: 'Autonomous Engine (Agent: DISPATCH_POLICY_CORE_01)',
+      complianceStandard: 'ISO 28000:2022 / 21 CFR Part 11 / SOC 2 Type II',
+      rationaleNotes: [
+        'Model confidence scored 98.4%, exceeding autonomous authorization threshold (≥92%).',
+        'Direct charter from Tokyo hub buffer eliminated intermediate customs queue in Seoul.',
+        'Validated zero-impact on EMEA server delivery schedule.',
+      ],
+    },
   },
   {
     id: 'EXE-2026-1048',
@@ -477,6 +492,20 @@ export const INITIAL_EXECUTION_LEDGER: ExecutionRecord[] = [
     executionMode: 'operator_authorized',
     status: 'completed',
     feedbackScore: 94,
+    auditTrail: {
+      auditHash: 'sha256:3e82b719001f3a2c589da418e27c191a0f83726451e784501a4e92bb1c5837a1',
+      triggerCondition: 'Border gauge transshipment queue delay +4.2 days at Brest transit hub',
+      policyRuleApplied: 'OPERATOR_SUPERVISED_INTERMODAL_DIVERSION_RULE_7',
+      erpReference: 'SAP-S4HANA-PTO-440291',
+      tmsSignature: 'EDI-304-PKP-CARGO-RAIL-MANIFEST-PL-7712',
+      customsBondId: 'EU-NCTS-MRN-26PL0049182901',
+      authorizedActor: 'S. Sterling (Global Tower Dispatch Director)',
+      complianceStandard: 'ISO 28000:2022 / AEO Authorized Economic Operator',
+      rationaleNotes: [
+        'Operator authorization manually verified rail car gauge conversion slots at Małaszewicze.',
+        'Holding cost reduced by €24,000 via dry-port bonded buffer release.',
+      ],
+    },
   },
   {
     id: 'EXE-2026-1047',
@@ -492,6 +521,20 @@ export const INITIAL_EXECUTION_LEDGER: ExecutionRecord[] = [
     executionMode: 'autonomous',
     status: 'completed',
     feedbackScore: 100,
+    auditTrail: {
+      auditHash: 'sha256:d891b2c4e5187309bb2a510918cba428da4192b34109827364501a82bb931fa2',
+      triggerCondition: 'IoT Telemetry logger battery alert (18% charge remaining on active cryogenic shipper)',
+      policyRuleApplied: 'AUTONOMOUS_COLD_CHAIN_ZERO_EXCURSION_INTERVENTION_P0',
+      erpReference: 'SAP-PHARMA-LOT-HOLD-882194',
+      tmsSignature: 'EDI-214-SWISSPORT-COLD-VAULT-HANDSHAKE-009',
+      customsBondId: 'FDA-PRIOR-NOTICE-PHARMA-PN882910',
+      authorizedActor: 'Autonomous Engine (Agent: COLD_CHAIN_DAEMON_CRYO)',
+      complianceStandard: '21 CFR Part 11 / EU GDP Guidelines / ISO 9001',
+      rationaleNotes: [
+        'Dry ice top-up executed within 42 minutes of ramp transfer at FRA.',
+        'Thermal profile logged continuously at -21.4°C; zero pharmaceutical batch degradation.',
+      ],
+    },
   },
   {
     id: 'EXE-2026-1046',
@@ -507,6 +550,20 @@ export const INITIAL_EXECUTION_LEDGER: ExecutionRecord[] = [
     executionMode: 'autonomous',
     status: 'completed',
     feedbackScore: 96,
+    auditTrail: {
+      auditHash: 'sha256:491827364501a4e92bb1c5837a13e82b719001f3a2c589da418e27c191a0f837',
+      triggerCondition: 'LAX terminal berth dwell forecast exceeded 7.8 days; chassis deficit alert',
+      policyRuleApplied: 'AUTONOMOUS_INTERMODAL_PORT_BYPASS_POL_12',
+      erpReference: 'SAP-S4HANA-ST-882019',
+      tmsSignature: 'EDI-315-BNSF-RAIL-BOOKING-OAK-MIDWEST-3312',
+      customsBondId: 'CBP-IT-ENTRY-7512-882091',
+      authorizedActor: 'Autonomous Engine (Agent: MARITIME_ROUTE_OPTIMIZER)',
+      complianceStandard: 'ISO 28000:2022 / C-TPAT Tier 3 Security',
+      rationaleNotes: [
+        'Bypassed 11-day vessel anchor queue at San Pedro Bay.',
+        'Transferred 40 TEU directly to Oakland on-dock rail intermodal terminal.',
+      ],
+    },
   },
   {
     id: 'EXE-2026-1045',
@@ -522,6 +579,20 @@ export const INITIAL_EXECUTION_LEDGER: ExecutionRecord[] = [
     executionMode: 'operator_authorized',
     status: 'completed',
     feedbackScore: 92,
+    auditTrail: {
+      auditHash: 'sha256:8829107f4c9a81e309bb2a41d5018cb1749830da42b9195d2c67341852f84501',
+      triggerCondition: 'Elbe River low water draft advisory restricted vessel loading capacity by 35%',
+      policyRuleApplied: 'OPERATOR_SUPERVISED_DUAL_SOURCE_ALLOCATION_POL_03',
+      erpReference: 'SAP-S4HANA-PO-SPLIT-992014',
+      tmsSignature: 'EDI-204-DOMESTIC-FLATBED-DISPATCH-99182',
+      customsBondId: 'ITAR-EAR99-EXEMPT-COMPLIANCE-DOC',
+      authorizedActor: 'M. Vance (Lead Aerospace Materials Planner)',
+      complianceStandard: 'AS9100D / ISO 28000:2022 / ITAR Compliance',
+      rationaleNotes: [
+        'Reallocated 180 metric tons from qualified secondary domestic mill in Indiana.',
+        'Charleston final assembly line delivery preserved without line-down shutdown.',
+      ],
+    },
   },
 ];
 
